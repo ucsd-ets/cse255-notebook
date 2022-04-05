@@ -2,6 +2,7 @@ FROM ucsdets/scipy-ml-notebook:2022.2-stable
 
 USER root
 
+RUN conda install python=3.7 -y
 RUN conda install -c conda-forge pyspark -y
 
 RUN pip install xgboost
