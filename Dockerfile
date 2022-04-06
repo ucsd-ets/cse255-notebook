@@ -2,7 +2,7 @@ FROM ucsdets/spark-master:2021.5.1
 
 USER root
 
-RUN conda install -c nvidia cudatoolkit=11.2 -y
+RUN conda install -c nvidia cudatoolkit=10.2 -y
 
 # install aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
