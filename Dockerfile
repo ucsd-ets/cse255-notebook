@@ -2,8 +2,8 @@ FROM ucsdets/scipy-ml-notebook:2022.2-stable
 
 USER root
 
-RUN conda install python=3.7 -y
-RUN conda install -c conda-forge pyspark -y
+
+RUN conda install -c conda-forge pyspark
 
 RUN pip install xgboost
 
@@ -12,7 +12,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     unzip awscliv2.zip && \
     ./aws/install
 
-# https://stackoverflow.com/questions/31841509/pyspark-exception-java-gateway-process-exited-before-sending-the-driver-its-po
-RUN apt-get update && apt-get install openjdk-8-jdk -y
 
 USER jovyan
