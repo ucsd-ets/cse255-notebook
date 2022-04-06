@@ -2,9 +2,7 @@ FROM ucsdets/spark-master:2021.5.1
 
 USER root
 
-
-
-RUN conda install -c anaconda cudatoolkit=11.2.2 -y
+RUN conda install -c anaconda cudatoolkit=11.2 -y
 
 # install aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -21,6 +19,5 @@ RUN pip install torch==${TORCH_VER} torchvision==${TORCH_VIS_VER} torchaudio==${
 	-f https://download.pytorch.org/whl/torch_stable.html && \
 	fix-permissions $CONDA_DIR && \
 	fix-permissions /home/$NB_USER
-
 
 USER jovyan
