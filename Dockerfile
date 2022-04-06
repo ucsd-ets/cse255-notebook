@@ -5,6 +5,8 @@ USER root
 
 
 RUN pip install xgboost pyspark
+RUN pip install "pyarrow>=4.0.0" --prefer-binary
+
 
 # install aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
