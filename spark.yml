@@ -1,0 +1,22 @@
+name: pyspark
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - anaconda
+dependencies:
+- cudatoolkit=10.1
+- cudnn
+- nccl
+- python=3.6
+- numpy
+- pip
+- pandas
+- matplotlib
+- seaborn
+- tensorflow-gpu
+- xgboost
+- jupyter
+- ipyleaflet
+- pytorch
+- torchvision
