@@ -1,11 +1,13 @@
-Sending build context to Docker daemon  208.4kB
+Sending build context to Docker daemon  214.5kB
 Step 1/7 : FROM ucsdets/datahub-base-notebook:2022.2-stable
  ---> 9f7d92bc1926
 Step 2/7 : USER root
  ---> Using cache
  ---> 8c7902ad16fb
 Step 3/7 : COPY spark.yml /tmp
- ---> 4116220be03f
+ ---> Using cache
+ ---> 88c108f6d005
 Step 4/7 : RUN conda env create -f /tmp/spark.yml
- ---> Running in 9c8cae081d6f
-Collecting package metadata (repodata.json): ...working... 
+ ---> Running in b0f0dcd5b91b
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... 
