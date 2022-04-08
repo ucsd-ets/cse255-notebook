@@ -4,10 +4,11 @@ channels:
   - conda-forge
   - pytorch
   - anaconda
+  - nvidia
 dependencies:
 - cudatoolkit=10.1
 - cudnn
-- nccl
+- cuda-nccl
 - nvcc
 - python=3.7
 - numpy
