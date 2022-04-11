@@ -12,4 +12,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 
 RUN conda run -n pyspark /bin/bash -c "ipython kernel install --name=spark"
 
+RUN conda run -n variant_calling /bin/bash -c "ipython kernel install --name=spark"
+
 USER jovyan
