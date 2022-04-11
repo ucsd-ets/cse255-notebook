@@ -1,17 +1,8 @@
-FROM ucsdets/datahub-base-notebook:2022.2-stable
+FROM ucsdets/spark-master:2021.5.1
 
 USER root
 
-COPY spark.yml /tmp
-RUN conda env create -f /tmp/spark.yml
+RUN pip install torch==1.8.1+cu101 torchvision==0.9.1+cu101 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 
-# install aws cli
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
-    unzip awscliv2.zip && \
-    ./aws/install
 
-RUN conda run -n pyspark /bin/bash -c "ipython kernel install --name=spark"
 
-RUN conda run -n variant_calling /bin/bash -c "ipython kernel install --name=spark"
-
-USER jovyan
